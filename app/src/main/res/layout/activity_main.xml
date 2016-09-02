@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="9"
+    android:background="#FFC7C7C7"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/lvcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="0.5"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="#FFC7C7C7"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/txtproductcompany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="COMPANY"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtproductname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="3dp"
+            android:text="PRODUCT"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtproductprice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="PRICE"
+            android:padding="3dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/lvcontainer"
+        android:layout_weight="7"></ListView>
+
+    <TextView
+        android:id="@+id/txtresulttext"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@android:id/list"
+        android:layout_marginTop="2dp"
+        android:layout_weight="0.5"
+        android:gravity="left"
+        android:text=""
+        android:textColor="#FFF55F54"
+        android:textSize="20sp"
+        android:textStyle="italic|bold"></TextView>
+
+    <LinearLayout
+        android:id="@+id/lvbottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnupload"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="IMPORT"
+            android:textColor="#ffffff"
+            android:background="#1083f5"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnexport"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="EXPORT"
+            android:onClick="onExportToCSV"
+            android:textColor="#ffffff"
+            android:background="#10f995"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
