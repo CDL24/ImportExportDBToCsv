@@ -239,6 +239,15 @@ public class MainActivity extends ListActivity {
                         String name = cursor.getString(cursor.getColumnIndex("Name"));
                         String price = cursor.getString(cursor.getColumnIndex("Price"));
 
+                        company = company.replace("\"", "");
+                        name = name.replace("\"", "");
+                        price = price.replace("\"", "");
+
+                        Log.v("company", company);
+                        Log.v("name", name);
+                        Log.v("price", price);
+                        Log.e("--------", "--------");
+
                         String arrStr[] ={company,
                                 name,
                                 price};
@@ -315,6 +324,16 @@ public class MainActivity extends ListActivity {
                     String company = str[0].toString();
                     String Name = str[1].toString();
                     String Price = str[2].toString();
+
+                    //Removing double quotes from data
+                    company = company.replace("\"", "");
+                    Name = Name.replace("\"", "");
+                    Price = Price.replace("\"", "");
+
+                    Log.v("company", company);
+                    Log.v("name", Name);
+                    Log.v("price", Price);
+                    Log.e("--------", "--------");
 
                     contentValues.put("Company", company);
                     contentValues.put("Name", Name);
